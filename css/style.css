@@ -1,0 +1,295 @@
+*{
+    margin:0;
+    padding:0;
+
+}
+body{
+    font-family: 'candara';
+    overflow-x: hidden;
+}
+
+
+/*Navbar*/
+
+
+/*Start Banner*/
+.container {position: relative;margin-top: 100px;}
+
+.container img {display: block;width: 100%;}
+
+nav {
+	position: fixed;
+	z-index: 10;
+	left: 0;
+	right: 0;
+	top: 0;
+	font-family: 'Montserrat', sans-serif;
+	padding: 0 5%;
+	height: 100px;
+	background-color: #555;
+}
+nav .logo {
+    float: left;
+    width: 40%;
+    height: 100%;
+    display: flex;
+     align-items: center;
+	font-size: 24px;
+	color: #fff;
+}
+nav .logo:hover,
+nav .links li a:hover {color:#e9e1e1}
+
+nav .links {
+	float: right;
+	padding: 0;
+	margin: 0;
+	width: 60%;
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+nav .links li {list-style: none;}
+
+nav .links a {display: block;padding: 1em;font-size: 16px;font-weight: bold;color: #fff;text-decoration: none;}
+
+#nav-toggle {position: absolute;top: -100px;}
+
+nav .icon-burger {display: none;position: absolute;right: 5%;top: 50%;;}
+
+nav .icon-burger .line {width: 30px;height: 5px;background-color: #fff;margin: 5px;border-radius: 3px;transition: all .3s ease-in-out;}
+
+@media screen and (max-width: 768px) {
+	nav .logo {float: none;width: auto;justify-content: center;}
+	nav .links {
+	   float: none;
+		position: fixed;
+		z-index: 9;
+		left: 0;
+		right: 0;
+		top: 100px;
+		bottom: 100%;
+		width: auto;
+		height: auto;
+		flex-direction: column;
+		background-color: rgba(0,0,0,.8);
+		overflow: hidden;
+		box-sizing: border-box;
+		transition: all .5s ease-in-out;
+	}
+
+	nav .links a {font-size: 20px;}
+
+	nav :checked ~ .links{bottom: 0;}
+
+	nav .icon-burger {display: block;}
+
+	nav :checked ~ .icon-burger .line:nth-child(1) {
+		transform: translateY(10px) rotate(225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(3) {
+		transform: translateY(-10px) rotate(-225deg);
+	}
+	nav :checked ~ .icon-burger .line:nth-child(2) {
+		opacity: 0;
+	}
+	
+}
+.banner{
+    background: url('../images/test.jpg') center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:500px;
+    margin-top:0px
+}
+
+
+
+.banner button{
+    border: 1px solid #000;
+    background-color:#fff;
+    color:#000;
+    height:3.1rem;
+    width:12rem;
+    background: #fff;
+   /* padding: 10px 25px;*/
+    margin:9px;
+    color: #000;
+    border: 1px solid #babcba;
+    font-size: 15px;
+    letter-spacing: 1px;
+    border-radius: 0;
+    -webkit-border-radius: 0px;
+    -o-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+}
+
+.banner .other::before{
+    content: "";
+    display: block;
+    width:70px;
+    height:2px;
+    background-color: #000;
+    position:absolute;
+    left:-70px;
+    top:80%;
+    
+}
+.banner a.btn{ border: none;background-color: #fff; color:#000}
+
+.banner a.btn:hover,
+.banner button:hover{background-color: #666;color:#fff}
+
+/*End  Banner*/
+/*Start feature2*/
+
+.features2 p{ padding-left:12rem}
+
+.features2  a.btn{background:gray;color: #fff;text-align: left;}
+
+.features2 a.btn:hover{color:gray;background-color: #fff;}
+
+@media screen and (max-width:780px){
+ 
+    .features2{text-align: center}
+
+    .features{padding-left:20rem}
+
+    .features h4{ margin-top:3rem;text-align: center;padding-right:30rem} 
+
+    .features-text { margin-top:3rem;text-align: center;padding-left:30rem; }
+
+    .features2 a{margin-left:2rem}
+}
+/*End feature2*/
+/*Start Learning*/
+.learning{  
+margin-top:30px; 
+ background:url('../images/test.jpg') center;
+ background-size: cover;
+ background-repeat:no-repeat;
+text-align:center;
+padding-top:25px
+}
+.learning h3{color:#000}
+.learning h4{
+text-align: center;
+border:.5px solid #fff;
+color:#666;
+background-color: #fff;
+/*width:18.4em;*/
+width:15em;
+height:4rem;
+padding-top:10px;
+margin-left:40px
+}
+
+
+
+@media screen and (max-width:780px){
+    
+    .learning{height:100%;text-align: center; }
+    .learning .blog-info {padding-left:25vh}
+
+}
+
+/*End Learning*/
+
+/*Start Success*/
+.success{text-align: center; padding-bottom: 25PX; margin-top:30px; }
+
+.success h3{font-size:12px}
+
+.success p{font-size:17px;color:#888}
+.success img {width:15%;margin:auto}
+
+
+@media screen and (max-width:780px){
+
+    .success{text-align: center; margin:20px }
+
+    .success p{text-align: center;}
+}
+/*End Success*/
+
+/*Start Brand*/
+.brand{
+    margin-top:30px; 
+    background:url('../images/test.jpg') center center;
+    background-size: cover;
+    background-repeat:no-repeat;
+    padding:35px;
+
+}
+
+.brand h3.tittle {
+    font-size: 2.2em;
+    line-height: 45px;
+}
+
+.brand .brand-right{padding-top:8rem}
+.brand .brand-right p {
+    font-size: 16px;
+    color: #666;
+    line-height: 3.8rem;
+}
+.brand-img{padding-left:20rem;padding-top:8rem}
+
+.brand a.btn,
+.learning a.btn {
+    background: #fff;
+    padding: 10px 25px;
+    margin:12px;
+    color: #000;
+    border: 2px solid #babcba;
+    font-size: 15px;
+    letter-spacing: 1px;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -o-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+}
+
+.brand a.btn:hover,
+.learning a.btn:hover{background-color:#666;color:#fafafa}
+@media screen and (max-width:780px){
+    .brand{margin-top:70px}
+    .brand-right{text-align: center;}
+}
+
+/*End Brand*/
+
+/*footer*/
+
+.footer {text-align:center;padding-left: 60vh;padding-top:10px;font-size:20px; background: #353a37 ;margin:0;height:90px}
+
+
+.footer .details { width: 50%; }
+
+
+.footer p,
+.footer a {color: #fff;}
+
+
+.footer .icons {width: 50%;text-align: center;font-size: 18px;}
+
+
+.footer .icons ul { margin: 0; padding: 0; list-style-type: none;}
+
+
+.footer .icons ul li {display: inline-block;margin-right: 1em;font-size: 1.5em;}
+@media screen and (max-width: 768px) {
+	.footer p{
+		line-height: 30px;
+		height:30px
+	}
+}
+/*footer*/
